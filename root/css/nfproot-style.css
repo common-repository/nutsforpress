@@ -1,0 +1,142 @@
+/*draw nfproot-switches instead of checkbox*/
+input.nfproot-switch:empty{
+	display:none;
+}
+ 
+input.nfproot-switch:empty ~ label:before, input.nfproot-switch:empty ~ label:after {
+	position: absolute;
+	content: ' ';
+	width: 34px;
+	height: 20px;
+	background-color: #c4c4c4;
+	border-radius: 15px;
+	-webkit-transition: all 200ms ease-in;
+	transition: all 200ms ease-in;
+}
+
+input.nfproot-switch:empty ~ label:after {
+	width: 16px;
+	height: 16px;
+	background-color: #ffffff;
+	border-radius: 50%;
+	margin:2px 0 0 -2px;
+}
+ 
+input.nfproot-switch:checked ~ label:before{
+	background-color: #2271B1;
+}
+ 
+input.nfproot-switch:checked ~ label:after{
+	margin: 2px 0 0 13px;
+}
+
+input.nfproot-switch ~ label{
+	padding-right: 31px;
+}
+
+.nfproot-settings-main-container {
+    margin-bottom: 200px;
+    width: 98%;
+    margin: 0 1% 0 1%;
+}
+
+.nfproot-settings-wrap h2 {
+	font-size:16px;
+	margin: 25px 0 25px 0;
+}
+
+.nfproot-settings-wrap h4 {
+	margin:25px 0 10px 0;
+}
+
+.nfproot-settings-wrap p{
+	margin:5px 0;
+}
+
+.nfproot-settings-wrap p.nfproot-setting-description{
+	margin-top:10px;
+}
+
+.nfproot-hidden-content {
+	display:none;
+	margin: 20px 0;
+}
+
+.nfproot-switching-content-expand, .nfproot-switching-content-shrink {
+	cursor:pointer;
+	margin-right: 10px;
+	display:inline-block;
+}
+
+.nfproot-switching-content-shrink {
+	display:none;
+}
+
+.nfproot-switch-child {
+    margin: 0 35px 0 35px;
+}
+
+.nfproot-after-input {
+	padding-left:10px;
+	display:inline;
+}
+
+.nfproot-after-input-bold {
+	font-weight:700;
+}
+
+.nfproot-wpml-alert{
+	font-weight:600;
+	color:#D63638
+}
+
+.nfproot-settings-container {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    margin: 0 35px 45px 35px
+}
+
+.nfproot-settings-container select{
+    width: 200px;
+}
+
+.nfproot-settings-container input[type=text], .nfproot-settings-container input[type=email], .nfproot-settings-container input[type=password]{
+    width: 265px;
+}
+
+.nfproot-settings-container textarea{
+    width: 650px;
+	height: 250px;
+}
+
+input[type=text].nfproot-long-text{
+    width: 650px;
+}
+
+@media screen and (max-width: 767px) {
+
+	.nfproot-switch-child {
+		margin: 0;
+	}
+	
+	.nfproot-after-input {
+		padding-left:0;
+		display:block;
+		margin-top: 10px;
+	}
+	
+	.nfproot-after-input-bold {
+		margin-left:0;
+		display:block;
+		margin-bottom: 35px;
+	}
+	
+	input[type=text].nfproot-long-text{
+		width: 265px;
+	}	
+	
+	.nfproot-settings-container textarea{
+		width: 265px;
+	}
+	
+}
